@@ -1,17 +1,12 @@
-// Convert Array to Number
 const arrayToNumber = (array)=>{
-   if (array.length>0){
       let number = ''
       array.forEach(element => {
          number += element
       });
       newNumber = Number(number)
       return newNumber
-   } else {
-      return 0
-   }  
-}
-// Sum array and convert back to array
+   } 
+
 const addArray = (a,b)=>{
   totalArray = []
    total = arrayToNumber(a) + arrayToNumber(b)
@@ -36,3 +31,12 @@ const secondArray = []
 
 console.log(addArray(firstArray,secondArray))
 console.log(addArray([3,2,6,6],[-7,2,2,8]))
+console.log(addArray([3,2,9], [1,2])); // Expected output: [3,4,1]
+console.log(addArray([4,7,3], [1,2,3])); // Expected output: [5,9,6]
+console.log(addArray([1], [5,7,6])); // Expected output: [5,7,7]
+console.log(addArray([], [])); // Expected output: []
+console.log(addArray([1], [])); // Expected output: [1]
+console.log(addArray([], [1])); // Expected output: [1]
+console.log(addArray([1,2], [-1])); // Expected output: [1,1]
+console.log(addArray([-1,2], [1])); // Expected output: [-1,1]
+console.log(addArray([1,1], [-1,1])); // Expected output: []
